@@ -25,6 +25,7 @@
 @property NSArray *transactions;
 @property BTCSatoshi balance;
 @property (nonatomic) CNLocalAuthenication *localAuth;
+@property (weak, nonatomic) IBOutlet UIView *noTransactionsFooterView;
 @end
 
 @implementation CNHomeViewController
@@ -143,6 +144,9 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.transactions = [dictionary valueForKey:@"results"];
                 [self.tableView reloadData];
+                
+                // Configure footer.
+                self.noTransactionsFooterView.hidden = (self.transactions.count) ? YES : NO;
             });
         }
     }];
