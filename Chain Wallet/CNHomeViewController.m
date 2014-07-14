@@ -145,7 +145,7 @@
                 
                 // Show the no transactions footer if needed.
                 self.tableView.tableFooterView = (self.transactions.count) ? nil : self.noTransactionsFooterView;
-                
+                self.tableView.hidden = NO;
                 [self.tableView reloadData];
             });
         }
