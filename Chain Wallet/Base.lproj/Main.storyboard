@@ -153,11 +153,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="DX5-iI-7GH">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="88"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No transactions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSW-5X-Bod">
-                            <rect key="frame" x="180" y="11" width="121" height="21"/>
+                            <rect key="frame" x="180" y="11" width="121" height="65"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="121" id="uMy-8B-EQI"/>
                             </constraints>
