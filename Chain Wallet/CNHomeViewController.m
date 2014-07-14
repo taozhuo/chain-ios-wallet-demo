@@ -13,8 +13,7 @@
 #import "CNKeyManager.h"
 #import "CNLocalAuthenication.h"
 #import <CoreBitcoin/CoreBitcoin+Categories.h>
-
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#import "UIColor+Additions.h"
 
 #define SEND_METHOD_ACTION_SHEET_TAG 1
 #define OPTIONS_ACTION_SHEET_TAG 2
@@ -292,16 +291,16 @@
     // Change Color of Transaction Amount if is sent or received or to self
     BOOL isTransactionToSelf = [self _isTransactionToSelf:transaction];
     if (isTransactionToSelf) {
-        transactionAmount.textColor = UIColorFromRGB(0x7d2b8b);
+        transactionAmount.textColor = [UIColor colorWithHex:0x7d2b8b];
         transactionAddress.text = @"To: Yourself (Launder that money, yo!)";
     } else {
         if (transactionValue < 0) {
             // Sent
-            transactionAmount.textColor = UIColorFromRGB(0xf76b6b);
+            transactionAmount.textColor = [UIColor colorWithHex:0xf76b6b];
             transactionAddress.text = [NSString stringWithFormat:@"To: %@", [self _outputAddressesString:transaction]];
         } else {
             // Receive
-            transactionAmount.textColor = UIColorFromRGB(0x7fdf40);
+            transactionAmount.textColor = [UIColor colorWithHex:0x7fdf40];
             transactionAddress.text = [NSString stringWithFormat:@"From: %@", [self _inputAddressesString:transaction]];
         }
     }
