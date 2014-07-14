@@ -142,10 +142,11 @@
         if (!error) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.transactions = [dictionary valueForKey:@"results"];
-                [self.tableView reloadData];
                 
                 // Show the no transactions footer if needed.
-                self.tableView.tableFooterView = (self.transactions.count) ? self.noTransactionsFooterView : NO;
+                self.tableView.tableFooterView = (self.transactions.count) ? nil : self.noTransactionsFooterView;
+                
+                [self.tableView reloadData];
             });
         }
     }];

@@ -152,7 +152,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <view hidden="YES" contentMode="scaleToFill" id="DX5-iI-7GH">
+                <view contentMode="scaleToFill" id="DX5-iI-7GH">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
