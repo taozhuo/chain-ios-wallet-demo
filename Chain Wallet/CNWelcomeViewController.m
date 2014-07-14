@@ -8,10 +8,6 @@
 #import "CNWelcomeViewController.h"
 #import "CNKeyManager.h"
 
-@interface CNWelcomeViewController ()
-
-@end
-
 @implementation CNWelcomeViewController
 
 - (IBAction)generateAnAddressAction:(id)sender {

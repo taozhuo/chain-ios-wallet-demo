@@ -1,17 +1,13 @@
 //
 //  CNExportPKeyViewController.mm
-//  
+//  Chain Wallet
 //
-//
+//  Copyright (c) 2014 Chain Inc. All rights reserved.
 //
 
 #import "CNExportPKeyViewController.h"
 #import "QREncoder.h"
 #import "CNKeyManager.h"
-
-@interface CNExportPKeyViewController ()
-
-@end
 
 @implementation CNExportPKeyViewController
 
@@ -22,12 +18,6 @@
     self.MyAddressLabel.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.QREncoderView.image = [QREncoder renderDataMatrix:[QREncoder encodeWithECLevel:1 version:1 string:self.MyPrivateKey]
                                      imageDimension:self.QREncoderView.frame.size.width];
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)dismissReceiveView:(id)sender {
@@ -38,7 +28,6 @@
     UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Export My Private Key" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Text Message", @"Copy to Clipboard", nil];
     [actionSheet showInView:self.view];
 }
-
 
 #pragma mark - Share Action Sheet
 
@@ -87,22 +76,16 @@
 }
 
 #pragma mark - MFMailComposeViewControllerDelegate methods
+
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
 {
     switch (result) {
-        case MessageComposeResultCancelled:
-            break;
-            
         case MessageComposeResultFailed:
         {
             UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Oups, error while sendind SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [warningAlert show];
             break;
-        }
-            
-        case MessageComposeResultSent:
-            break;
-            
+        }   
         default:
             break;
     }

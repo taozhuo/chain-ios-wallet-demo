@@ -152,10 +152,6 @@
     }];
 }
 
-- (void)reloadTable {
-    [self.tableView reloadData];
-}
-
 #pragma mark - Send Option Action Sheet
 
 - (void)_showSendMethodOptionSheet {
@@ -241,8 +237,7 @@
 }
 
 // We set this to match the custom cell height from the storyboard
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 80;
 }
 

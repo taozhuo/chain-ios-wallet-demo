@@ -1,17 +1,13 @@
 //
 //  ReceiveViewController.m
-//  
+//  Chain Wallet
 //
-//
+//  Copyright (c) 2014 Chain Inc. All rights reserved.
 //
 
 #import "CNReceiveViewController.h"
 #import "QREncoder.h"
 #import "CNKeyManager.h"
-
-@interface CNReceiveViewController ()
-
-@end
 
 @implementation CNReceiveViewController
 
@@ -24,11 +20,6 @@
                                      imageDimension:self.QREncoderView.frame.size.width];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)dismissReceiveView:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -36,9 +27,7 @@
 - (IBAction)ShareMyAddress:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Share My Address" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Text Message", @"Copy to Clipboard", nil];
     [actionSheet showInView:self.view];
-    }
-
-
+}
 
 #pragma mark - Share Action Sheet
 
@@ -61,13 +50,13 @@
 - (void)shareViaTextMessage {
     //check if the device can send text messages
     if(![MFMessageComposeViewController canSendText]) {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device cannot send text messages" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device cannot send text messages" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         return;
     }
     
     //set message text
-    NSString * message = [NSString stringWithFormat:@"Send me Bitcoin, yo! Here's my address:\n\n%@", self.MyAddress];
+    NSString *message = [NSString stringWithFormat:@"Send me Bitcoin, yo! Here's my address:\n\n%@", self.MyAddress];
     
     MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
     messageController.messageComposeDelegate = self;
@@ -86,28 +75,19 @@
 }
 
 #pragma mark - MFMailComposeViewControllerDelegate methods
-- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
-{
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result {
     switch (result) {
-        case MessageComposeResultCancelled:
-            break;
-            
         case MessageComposeResultFailed:
         {
             UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Oups, error while sendind SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [warningAlert show];
             break;
         }
-            
-        case MessageComposeResultSent:
-            break;
-            
         default:
             break;
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 @end

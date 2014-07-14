@@ -11,7 +11,6 @@
 #import <CoreBitcoin/CoreBitcoin+Categories.h>
 #import <CoreBitcoin/BTCChainCom.h>
 
-#define CHAIN_TOKEN @"GUEST-TOKEN"
 #define CHAIN_ERROR_DOMAIN @"com.Chain.Chain-Wallet.ErrorDomain"
 
 @implementation CNBitcoinSendManager

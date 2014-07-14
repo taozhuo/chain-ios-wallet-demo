@@ -11,23 +11,14 @@
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-
-@interface CNAppDelegate ()
-            
-
-@end
-
 @implementation CNAppDelegate
-            
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     // REPLACE THIS LIMITED "GUEST-TOKEN" WITH YOUR API TOKEN FROM CHAIN.COM
     [Chain sharedInstanceWithToken:@"GUEST-TOKEN"];
     
     // REMOVE THIS LINE AFTER DEFINING YOUR API TOKEN
     NSLog(@"\n!!!\nYOUR ARE USING A LIMITED GUEST TOKEN FOR THE CHAIN API. PLEASE VISIT CHAIN.COM AND REGISTER TO RECIEVE YOUR PERSONAL API TOKEN.\n!!!\n");
-    
     
     
     // Style the navigation bar
