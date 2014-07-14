@@ -144,8 +144,8 @@
                 self.transactions = [dictionary valueForKey:@"results"];
                 [self.tableView reloadData];
                 
-                // Configure footer.
-                self.noTransactionsFooterView.hidden = (self.transactions.count) ? YES : NO;
+                // Show the no transactions footer if needed.
+                self.tableView.tableFooterView = (self.transactions.count) ? self.noTransactionsFooterView : NO;
             });
         }
     }];
