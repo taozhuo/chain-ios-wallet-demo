@@ -14,6 +14,7 @@ typedef enum : NSUInteger {
 
 @interface Chain()
 @property NSString *token;
+@property NSURLSession *session;
 @end
 
 @implementation Chain
@@ -169,6 +170,10 @@ static Chain *sharedInstance = nil;
 }
 
 -(void)_startTaskWithRequestMethod:(ChainRequestMethod)method URL:(NSURL *)url data:(NSData *)data completionHandler:(void (^)(NSDictionary *dictionary, NSError *error))completionHandler {
+    
+    if (!self.session) {
+        self.session = [self _newChainSession];
+    }
 
     void(^chainCompletionHandler)(NSData *, NSURLResponse *, NSError *) = ^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
@@ -203,19 +208,15 @@ static Chain *sharedInstance = nil;
         case ChainRequestMethodPut: {
             NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
             [urlRequest setHTTPMethod:@"PUT"];
-            NSURLSession *session = [self _newChainSession];
-            [[session uploadTaskWithRequest:urlRequest fromData:data completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            [[self.session uploadTaskWithRequest:urlRequest fromData:data completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                 chainCompletionHandler(data, response, error);
             }] resume];
-            [session finishTasksAndInvalidate];
         }
             break;
         case ChainRequestMethodGet: {
-            NSURLSession *session = [self _newChainSession];
-            [[session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            [[self.session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                 chainCompletionHandler(data, response, error);
             }] resume];
-            [session finishTasksAndInvalidate];
         }
             break;
         default:
