@@ -46,11 +46,11 @@
     // Show welcome screen if we haven't generated an address.
     NSString *publicKey = [CNKeyManager getPublicKey];
     UIViewController *viewController  = nil;
-//    if (![publicKey length]) {
+    if (![publicKey length]) {
         viewController = [storyboard instantiateViewControllerWithIdentifier:@"welcomeViewController"];
-//    } else {
-//        viewController = [storyboard instantiateViewControllerWithIdentifier:@"transactionsNavigationController"];
-//    }
+    } else {
+        viewController = [storyboard instantiateViewControllerWithIdentifier:@"transactionsNavigationController"];
+    }
     
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];

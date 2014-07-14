@@ -203,7 +203,7 @@
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:strurl]];
         }
         if (buttonIndex == 1) {
-            NSString *strurl = @"https://github.com/chain-engineering/chain-ios8-wallet-demo";
+            NSString *strurl = @"https://github.com/chain-engineering/chain-ios-wallet-demo";
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:strurl]];
         }
         if (buttonIndex == 2) {
