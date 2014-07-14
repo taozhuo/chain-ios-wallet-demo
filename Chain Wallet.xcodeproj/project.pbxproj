@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000BEB7719649F48008E2865 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 000BEB7619649F48008E2865 /* main.m */; };
+		000BEB7A19649F48008E2865 /* CNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 000BEB7919649F48008E2865 /* CNAppDelegate.m */; };
+		000BEB7D19649F48008E2865 /* CNHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000BEB7C19649F48008E2865 /* CNHomeViewController.m */; };
+		000BEB8019649F48008E2865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000BEB7E19649F48008E2865 /* Main.storyboard */; };
+		000BEB8219649F48008E2865 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000BEB8119649F48008E2865 /* Images.xcassets */; };
+		000BEB9919649FAD008E2865 /* CNSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000BEB9819649FAD008E2865 /* CNSendViewController.m */; };
+		004EA53B196CC3E30061A6B0 /* CNReceiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 004EA53A196CC3E30061A6B0 /* CNReceiveViewController.mm */; };
+		00B50AD6196F27510066A0A5 /* CNExportPKeyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00B50AD4196F27510066A0A5 /* CNExportPKeyViewController.mm */; };
+		00C2DE311966248900278CB3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C2DE301966248900278CB3 /* MessageUI.framework */; };
+		567B7A5D11694E0A8EDEDB42 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF0F8BEE9CE42109B86A0DA /* libPods.a */; };
+		C94D88FD19661B73009240BF /* CNBitcoinSendManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C94D88FC19661B73009240BF /* CNBitcoinSendManager.m */; };
+		C9639DBE19708D13000984E5 /* CNLocalAuthenication.m in Sources */ = {isa = PBXBuildFile; fileRef = C9639DBD19708D13000984E5 /* CNLocalAuthenication.m */; };
+		C97A877A19705FE0006EE6EA /* CNWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97A877919705FE0006EE6EA /* CNWelcomeViewController.m */; };
+		C9B766F71964CDD700B278E9 /* CNKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B766F61964CDD700B278E9 /* CNKeyManager.m */; };
+		C9B766FA1964CDDD00B278E9 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B766F91964CDDD00B278E9 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		000BEB8819649F48008E2865 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000BEB6919649F48008E2865 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000BEB7019649F48008E2865;
+			remoteInfo = "Chain Wallet Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		000BEB7119649F48008E2865 /* Chain Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chain Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000BEB7519649F48008E2865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Chain Wallet/Info.plist"; sourceTree = SOURCE_ROOT; };
+		000BEB7619649F48008E2865 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		000BEB7819649F48008E2865 /* CNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNAppDelegate.h; sourceTree = "<group>"; };
+		000BEB7919649F48008E2865 /* CNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNAppDelegate.m; sourceTree = "<group>"; };
+		000BEB7B19649F48008E2865 /* CNHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNHomeViewController.h; sourceTree = "<group>"; };
+		000BEB7C19649F48008E2865 /* CNHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNHomeViewController.m; sourceTree = "<group>"; };
+		000BEB7F19649F48008E2865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		000BEB8119649F48008E2865 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		000BEB8719649F48008E2865 /* Chain WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chain WalletTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000BEB9719649FAD008E2865 /* CNSendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNSendViewController.h; sourceTree = "<group>"; };
+		000BEB9819649FAD008E2865 /* CNSendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNSendViewController.m; sourceTree = "<group>"; };
+		004EA539196CC3E30061A6B0 /* CNReceiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNReceiveViewController.h; sourceTree = "<group>"; };
+		004EA53A196CC3E30061A6B0 /* CNReceiveViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CNReceiveViewController.mm; sourceTree = "<group>"; };
+		00B50AD4196F27510066A0A5 /* CNExportPKeyViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CNExportPKeyViewController.mm; sourceTree = "<group>"; };
+		00B50AD5196F27510066A0A5 /* CNExportPKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNExportPKeyViewController.h; sourceTree = "<group>"; };
+		00C2DE301966248900278CB3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		10DE1BD2931A4AE8932DD92A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C94D88F9196609AA009240BF /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		C94D88FB19661B73009240BF /* CNBitcoinSendManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBitcoinSendManager.h; sourceTree = "<group>"; };
+		C94D88FC19661B73009240BF /* CNBitcoinSendManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNBitcoinSendManager.m; sourceTree = "<group>"; };
+		C9639DBC19708D13000984E5 /* CNLocalAuthenication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNLocalAuthenication.h; sourceTree = "<group>"; };
+		C9639DBD19708D13000984E5 /* CNLocalAuthenication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNLocalAuthenication.m; sourceTree = "<group>"; };
+		C97A877819705FE0006EE6EA /* CNWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNWelcomeViewController.h; sourceTree = "<group>"; };
+		C97A877919705FE0006EE6EA /* CNWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNWelcomeViewController.m; sourceTree = "<group>"; };
+		C9B766F51964CDD700B278E9 /* CNKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNKeyManager.h; sourceTree = "<group>"; };
+		C9B766F61964CDD700B278E9 /* CNKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKeyManager.m; sourceTree = "<group>"; };
+		C9B766F81964CDDD00B278E9 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		C9B766F91964CDDD00B278E9 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		DBF0F8BEE9CE42109B86A0DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000BEB6E19649F48008E2865 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C2DE311966248900278CB3 /* MessageUI.framework in Frameworks */,
+				567B7A5D11694E0A8EDEDB42 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000BEB8419649F48008E2865 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000BEB6819649F48008E2865 = {
+			isa = PBXGroup;
+			children = (
+				000BEB7319649F48008E2865 /* Chain Wallet */,
+				000BEB7219649F48008E2865 /* Products */,
+				10DE1BD2931A4AE8932DD92A /* Pods.xcconfig */,
+				944EA322EFE44F0CB010FD06 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		000BEB7219649F48008E2865 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000BEB7119649F48008E2865 /* Chain Wallet.app */,
+				000BEB8719649F48008E2865 /* Chain WalletTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000BEB7319649F48008E2865 /* Chain Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				000BEB7819649F48008E2865 /* CNAppDelegate.h */,
+				000BEB7919649F48008E2865 /* CNAppDelegate.m */,
+				C94D88FB19661B73009240BF /* CNBitcoinSendManager.h */,
+				C94D88FC19661B73009240BF /* CNBitcoinSendManager.m */,
+				00B50AD5196F27510066A0A5 /* CNExportPKeyViewController.h */,
+				00B50AD4196F27510066A0A5 /* CNExportPKeyViewController.mm */,
+				000BEB7B19649F48008E2865 /* CNHomeViewController.h */,
+				000BEB7C19649F48008E2865 /* CNHomeViewController.m */,
+				C9B766F51964CDD700B278E9 /* CNKeyManager.h */,
+				C9B766F61964CDD700B278E9 /* CNKeyManager.m */,
+				C9639DBC19708D13000984E5 /* CNLocalAuthenication.h */,
+				C9639DBD19708D13000984E5 /* CNLocalAuthenication.m */,
+				004EA539196CC3E30061A6B0 /* CNReceiveViewController.h */,
+				004EA53A196CC3E30061A6B0 /* CNReceiveViewController.mm */,
+				000BEB9719649FAD008E2865 /* CNSendViewController.h */,
+				000BEB9819649FAD008E2865 /* CNSendViewController.m */,
+				C97A877819705FE0006EE6EA /* CNWelcomeViewController.h */,
+				C97A877919705FE0006EE6EA /* CNWelcomeViewController.m */,
+				C939FC57196F0E7F009308EE /* External */,
+				000BEB8119649F48008E2865 /* Images.xcassets */,
+				000BEB7E19649F48008E2865 /* Main.storyboard */,
+				000BEB7419649F48008E2865 /* Supporting Files */,
+			);
+			path = "Chain Wallet";
+			sourceTree = "<group>";
+		};
+		000BEB7419649F48008E2865 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				000BEB7519649F48008E2865 /* Info.plist */,
+				000BEB7619649F48008E2865 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		944EA322EFE44F0CB010FD06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00C2DE301966248900278CB3 /* MessageUI.framework */,
+				C94D88F9196609AA009240BF /* LocalAuthentication.framework */,
+				DBF0F8BEE9CE42109B86A0DA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C939FC57196F0E7F009308EE /* External */ = {
+			isa = PBXGroup;
+			children = (
+				C9B766F81964CDDD00B278E9 /* KeychainItemWrapper.h */,
+				C9B766F91964CDDD00B278E9 /* KeychainItemWrapper.m */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000BEB7019649F48008E2865 /* Chain Wallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000BEB9119649F48008E2865 /* Build configuration list for PBXNativeTarget "Chain Wallet" */;
+			buildPhases = (
+				06CC7834687D4DF38B353503 /* Check Pods Manifest.lock */,
+				000BEB6D19649F48008E2865 /* Sources */,
+				000BEB6E19649F48008E2865 /* Frameworks */,
+				000BEB6F19649F48008E2865 /* Resources */,
+				F1A86FE9AE5D40868EAFE46F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chain Wallet";
+			productName = "Chain Wallet Demo";
+			productReference = 000BEB7119649F48008E2865 /* Chain Wallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		000BEB8619649F48008E2865 /* Chain WalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000BEB9419649F48008E2865 /* Build configuration list for PBXNativeTarget "Chain WalletTests" */;
+			buildPhases = (
+				000BEB8319649F48008E2865 /* Sources */,
+				000BEB8419649F48008E2865 /* Frameworks */,
+				000BEB8519649F48008E2865 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000BEB8919649F48008E2865 /* PBXTargetDependency */,
+			);
+			name = "Chain WalletTests";
+			productName = "Chain Wallet DemoTests";
+			productReference = 000BEB8719649F48008E2865 /* Chain WalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000BEB6919649F48008E2865 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Chain Inc.";
+				TargetAttributes = {
+					000BEB7019649F48008E2865 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = JSS4C444NR;
+					};
+					000BEB8619649F48008E2865 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 000BEB7019649F48008E2865;
+					};
+				};
+			};
+			buildConfigurationList = 000BEB6C19649F48008E2865 /* Build configuration list for PBXProject "Chain Wallet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000BEB6819649F48008E2865;
+			productRefGroup = 000BEB7219649F48008E2865 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000BEB7019649F48008E2865 /* Chain Wallet */,
+				000BEB8619649F48008E2865 /* Chain WalletTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000BEB6F19649F48008E2865 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000BEB8019649F48008E2865 /* Main.storyboard in Resources */,
+				000BEB8219649F48008E2865 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000BEB8519649F48008E2865 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06CC7834687D4DF38B353503 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1A86FE9AE5D40868EAFE46F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000BEB6D19649F48008E2865 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000BEB9919649FAD008E2865 /* CNSendViewController.m in Sources */,
+				C9639DBE19708D13000984E5 /* CNLocalAuthenication.m in Sources */,
+				C97A877A19705FE0006EE6EA /* CNWelcomeViewController.m in Sources */,
+				000BEB7D19649F48008E2865 /* CNHomeViewController.m in Sources */,
+				C94D88FD19661B73009240BF /* CNBitcoinSendManager.m in Sources */,
+				C9B766FA1964CDDD00B278E9 /* KeychainItemWrapper.m in Sources */,
+				C9B766F71964CDD700B278E9 /* CNKeyManager.m in Sources */,
+				000BEB7A19649F48008E2865 /* CNAppDelegate.m in Sources */,
+				004EA53B196CC3E30061A6B0 /* CNReceiveViewController.mm in Sources */,
+				00B50AD6196F27510066A0A5 /* CNExportPKeyViewController.mm in Sources */,
+				000BEB7719649F48008E2865 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000BEB8319649F48008E2865 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		000BEB8919649F48008E2865 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000BEB7019649F48008E2865 /* Chain Wallet */;
+			targetProxy = 000BEB8819649F48008E2865 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		000BEB7E19649F48008E2865 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				000BEB7F19649F48008E2865 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		000BEB8F19649F48008E2865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		000BEB9019649F48008E2865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000BEB9219649F48008E2865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10DE1BD2931A4AE8932DD92A /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Chain Wallet/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Chain Wallet";
+			};
+			name = Debug;
+		};
+		000BEB9319649F48008E2865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10DE1BD2931A4AE8932DD92A /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "Chain Wallet/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Chain Wallet";
+			};
+			name = Release;
+		};
+		000BEB9519649F48008E2865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Chain Wallet Demo.app/Chain Wallet Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Chain Wallet DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "Chain WalletTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		000BEB9619649F48008E2865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Chain Wallet Demo.app/Chain Wallet Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Chain Wallet DemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "Chain WalletTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000BEB6C19649F48008E2865 /* Build configuration list for PBXProject "Chain Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000BEB8F19649F48008E2865 /* Debug */,
+				000BEB9019649F48008E2865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000BEB9119649F48008E2865 /* Build configuration list for PBXNativeTarget "Chain Wallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000BEB9219649F48008E2865 /* Debug */,
+				000BEB9319649F48008E2865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000BEB9419649F48008E2865 /* Build configuration list for PBXNativeTarget "Chain WalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000BEB9519649F48008E2865 /* Debug */,
+				000BEB9619649F48008E2865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000BEB6919649F48008E2865 /* Project object */;
+}
