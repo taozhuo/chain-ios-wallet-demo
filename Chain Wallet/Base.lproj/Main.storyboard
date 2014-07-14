@@ -115,14 +115,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Yf4-jk-xuM" firstAttribute="leading" secondItem="vbq-lp-ajX" secondAttribute="leading" id="7qO-dL-hEO"/>
-                            <constraint firstItem="Yf4-jk-xuM" firstAttribute="trailing" secondItem="vbq-lp-ajX" secondAttribute="trailing" id="GEE-Ll-r4C"/>
+                            <constraint firstItem="Yf4-jk-xuM" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="AQA-GY-Zsy"/>
+                            <constraint firstItem="Yf4-jk-xuM" firstAttribute="leading" secondItem="vbq-lp-ajX" secondAttribute="leading" id="POn-oy-u2E"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vbq-lp-ajX" secondAttribute="bottom" id="TrF-Z6-xqC"/>
                             <constraint firstItem="Yf4-jk-xuM" firstAttribute="bottom" secondItem="vbq-lp-ajX" secondAttribute="top" id="bbd-TA-hqI"/>
                             <constraint firstItem="vbq-lp-ajX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="esS-3q-F3W"/>
                             <constraint firstAttribute="trailing" secondItem="vbq-lp-ajX" secondAttribute="trailing" id="hBc-oa-zvM"/>
                             <constraint firstItem="Yf4-jk-xuM" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="qBf-QH-If4"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AQA-GY-Zsy"/>
+                                <exclude reference="POn-oy-u2E"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="AQA-GY-Zsy"/>
+                                <include reference="POn-oy-u2E"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="fHI-Xg-f23">
                         <barButtonItem key="rightBarButtonItem" title="●●●" id="acc-oq-PgP">
