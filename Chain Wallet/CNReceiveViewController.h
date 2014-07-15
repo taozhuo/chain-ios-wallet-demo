@@ -9,7 +9,5 @@
 #import <MessageUI/MessageUI.h>
 
 @interface CNReceiveViewController : UIViewController <MFMessageComposeViewControllerDelegate, UIActionSheetDelegate>
-@property (weak, nonatomic) IBOutlet UIImageView *QREncoderView;
-@property (weak, nonatomic) IBOutlet UIButton *addressLabel;
 
 @end

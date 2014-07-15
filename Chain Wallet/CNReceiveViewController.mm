@@ -9,6 +9,11 @@
 #import "QREncoder.h"
 #import "CNKeyManager.h"
 
+@interface CNReceiveViewController()
+@property (weak, nonatomic) IBOutlet UIImageView *QREncoderView;
+@property (weak, nonatomic) IBOutlet UIButton *addressLabel;
+@end
+
 @implementation CNReceiveViewController
 
 - (void)viewDidLoad {
@@ -23,7 +28,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)ShareMyAddress:(id)sender {
+- (IBAction)shareMyAddress:(id)sender {
     UIActionSheet *actionSheet = [[UIActionSheet alloc]initWithTitle:@"Share My Address" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Text Message", @"Copy to Clipboard", nil];
     [actionSheet showInView:self.view];
 }

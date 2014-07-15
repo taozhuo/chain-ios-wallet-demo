@@ -206,7 +206,7 @@
                                     <color key="titleColor" red="0.070588235294117646" green="0.792156862745098" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ShareMyAddress:" destination="6xk-7V-wNW" eventType="touchUpInside" id="UMV-Wa-BdA"/>
+                                    <action selector="shareMyAddress:" destination="6xk-7V-wNW" eventType="touchUpInside" id="Civ-qk-YBQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -226,7 +226,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Share" id="Zj4-rE-eHT">
                             <connections>
-                                <action selector="ShareMyAddress:" destination="6xk-7V-wNW" id="Z7T-KA-2A4"/>
+                                <action selector="shareMyAddress:" destination="6xk-7V-wNW" id="rE7-bC-1w5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -270,7 +270,7 @@
                                     <color key="titleColor" red="0.070588235289999995" green="0.79215686269999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ShareMyAddress:" destination="uEJ-5D-OOc" eventType="touchUpInside" id="M5B-vD-G7e"/>
+                                    <action selector="shareMyAddress:" destination="uEJ-5D-OOc" eventType="touchUpInside" id="kpN-Yj-bon"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -290,7 +290,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Export" id="vKJ-yF-27d">
                             <connections>
-                                <action selector="ShareMyAddress:" destination="uEJ-5D-OOc" id="YBJ-zS-i21"/>
+                                <action selector="shareMyAddress:" destination="uEJ-5D-OOc" id="0oY-Ed-Q0E"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
