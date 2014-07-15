@@ -1,6 +1,6 @@
 <img src="https://s3.amazonaws.com/chain-assets/chain-wallet-banner.png" style="width:100%"/>
 
-# Chain Wallet
+# Chain iOS Wallet Demo
 
 A Touch ID iOS Bitcoin wallet built on the [Chain API](https://chain.com).
 
