@@ -1,5 +1,5 @@
 //
-//  ReceiveViewController.m
+//  CNReceiveViewController.mm
 //  Chain Wallet
 //
 //  Copyright (c) 2014 Chain Inc. All rights reserved.
@@ -13,10 +13,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.MyAddress = [CNKeyManager getPublicKey];
-    [self.MyAddressLabel setTitle:self.MyAddress forState:UIControlStateNormal];
-    self.MyAddressLabel.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.QREncoderView.image = [QREncoder renderDataMatrix:[QREncoder encodeWithECLevel:1 version:1 string:self.MyAddress]
+    [self.addressLabel setTitle:[CNKeyManager getPublicKey] forState:UIControlStateNormal];
+    self.addressLabel.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.QREncoderView.image = [QREncoder renderDataMatrix:[QREncoder encodeWithECLevel:1 version:1 string:[CNKeyManager getPublicKey]]
                                      imageDimension:self.QREncoderView.frame.size.width];
 }
 
@@ -44,7 +43,7 @@
 
 - (void)copyToClipboard {
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    pasteboard.string = self.MyAddress;
+    pasteboard.string = [CNKeyManager getPublicKey];
 }
 
 - (void)shareViaTextMessage {
@@ -56,7 +55,7 @@
     }
     
     //set message text
-    NSString *message = [NSString stringWithFormat:@"Send me Bitcoin, yo! Here's my address:\n\n%@", self.MyAddress];
+    NSString *message = [NSString stringWithFormat:@"Send me Bitcoin, yo! Here's my address:\n\n%@", [CNKeyManager getPublicKey]];
     
     MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
     messageController.messageComposeDelegate = self;

@@ -1,5 +1,5 @@
 //
-//  ReceiveViewController.h
+//  CNReceiveViewController.h
 //  Chain Wallet
 //
 //  Copyright (c) 2014 Chain Inc. All rights reserved.
@@ -10,7 +10,6 @@
 
 @interface CNReceiveViewController : UIViewController <MFMessageComposeViewControllerDelegate, UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *QREncoderView;
-@property (weak, nonatomic) IBOutlet UIButton *MyAddressLabel;
-@property (strong, nonatomic) NSString *MyAddress;
+@property (weak, nonatomic) IBOutlet UIButton *addressLabel;
 
 @end

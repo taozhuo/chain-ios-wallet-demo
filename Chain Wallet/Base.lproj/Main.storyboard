@@ -231,8 +231,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="MyAddressLabel" destination="1zL-T1-J6S" id="1ke-UN-UrX"/>
                         <outlet property="QREncoderView" destination="LVA-eZ-wkV" id="Ug1-CH-QiP"/>
+                        <outlet property="addressLabel" destination="1zL-T1-J6S" id="cKj-CL-lGL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwb-d7-hZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
