@@ -28,4 +28,9 @@ Finally, get a Chain API token at [Chain.com](https://chain.com) and define the 
 ```
 
 ## Requirements
-Chain Wallet requires Touch ID (currently available only on iPhone 5s) and iOS 8.
+Chain Wallet requires iOS 8 and Touch ID (currently available on the iPhone 5s).
+
+## About Chain
+[Chain](https://chain.com) is a powerful API that makes it easy to build Bitcoin applications - without managing complicated block chain infrastructure. We believe that virtual currency is only the first of thousands of applications that will be built on the block chain, and we are excited to provide the platform that allows you to focus on creating great products.
+
+We want to understand your needs and build along side you. So don’t hesitate to request features, make suggestions, or just [say hello](mailto:hello@chain.com).
