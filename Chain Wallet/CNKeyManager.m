@@ -57,7 +57,9 @@
 }
 
 + (BTCKey *)_key:(BOOL)createNewKey {
-    // If we want to prevent other apps from the same organization from accessing this an access group must be set.
+    // KeyChainItemWrapper uses SecItemAdd() to store items in the keychain.
+    // SecItemAdd() documenation explains that if no access group is set, the application-identifier entitlement is used,
+    // limiting item access to only a single appliction.
     KeychainItemWrapper *wrapper = [[KeychainItemWrapper alloc] initWithIdentifier:KEYCHAIN_PRIVATE_KEY_IDENTIFIER accessGroup:nil];
     NSString *privateKeyHexString = (NSString *)[wrapper objectForKey:(__bridge id)kSecValueData];
     
