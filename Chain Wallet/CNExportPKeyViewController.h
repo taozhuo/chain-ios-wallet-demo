@@ -10,7 +10,6 @@
 
 @interface CNExportPKeyViewController : UIViewController <MFMessageComposeViewControllerDelegate, UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *QREncoderView;
-@property (weak, nonatomic) IBOutlet UIButton *MyAddressLabel;
-@property (strong, nonatomic) NSString *MyPrivateKey;
+@property (weak, nonatomic) IBOutlet UIButton *addressLabel;
 
 @end

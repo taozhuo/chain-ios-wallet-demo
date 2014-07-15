@@ -13,10 +13,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.MyPrivateKey = [CNKeyManager getPrivateKey];
-    [self.MyAddressLabel setTitle:self.MyPrivateKey forState:UIControlStateNormal];
-    self.MyAddressLabel.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.QREncoderView.image = [QREncoder renderDataMatrix:[QREncoder encodeWithECLevel:1 version:1 string:self.MyPrivateKey]
+    [self.addressLabel setTitle:[CNKeyManager getPrivateKey] forState:UIControlStateNormal];
+    self.addressLabel.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.QREncoderView.image = [QREncoder renderDataMatrix:[QREncoder encodeWithECLevel:1 version:1 string:[CNKeyManager getPrivateKey]]
                                      imageDimension:self.QREncoderView.frame.size.width];
 }
 
@@ -44,19 +43,19 @@
 
 - (void)copyToClipboard {
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-    pasteboard.string = self.MyPrivateKey;
+    pasteboard.string = [CNKeyManager getPrivateKey];;
 }
 
 - (void)shareViaTextMessage {
     //check if the device can send text messages
     if(![MFMessageComposeViewController canSendText]) {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device cannot send text messages" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device cannot send text messages" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         return;
     }
     
-    //set message text
-    NSString * message = [NSString stringWithFormat:@"My Private Key:\n\n%@", self.MyPrivateKey];
+    // Set message text
+    NSString *message = [NSString stringWithFormat:@"My Private Key:\n\n%@", [CNKeyManager getPrivateKey]];
     
     MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
     messageController.messageComposeDelegate = self;
@@ -77,11 +76,9 @@
 
 #pragma mark - MFMailComposeViewControllerDelegate methods
 
-- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
-{
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result {
     switch (result) {
-        case MessageComposeResultFailed:
-        {
+        case MessageComposeResultFailed: {
             UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Oups, error while sendind SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [warningAlert show];
             break;
@@ -92,6 +89,5 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 @end
