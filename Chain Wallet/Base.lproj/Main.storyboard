@@ -454,21 +454,15 @@
                                     <action selector="generateAnAddressAction:" destination="98W-bO-8cq" eventType="touchUpInside" id="C7y-g7-XOb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A client-side Bitcoin wallet  built on the Chain.com API" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="oWf-hE-eyg">
-                                <rect key="frame" x="90" y="100" width="300" height="57"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Touch ID Bitcoin wallet  built on the Chain.com API" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="oWf-hE-eyg">
+                                <rect key="frame" x="90" y="97" width="300" height="57"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="5rX-dp-zk6"/>
-                                    <constraint firstAttribute="width" constant="300" id="vL0-8m-7Ge"/>
+                                    <constraint firstAttribute="height" constant="57" id="6Bj-dN-BYx"/>
+                                    <constraint firstAttribute="width" constant="300" id="nce-bZ-OO0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="5rX-dp-zk6"/>
-                                        <exclude reference="vL0-8m-7Ge"/>
-                                    </mask>
-                                </variation>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chain Wallet Demo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pk-Os-Taw">
                                 <rect key="frame" x="96" y="52" width="288" height="40"/>
@@ -483,85 +477,31 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="82T-8j-rjD">
                                 <rect key="frame" x="110" y="344" width="260" height="102"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="0ne-XW-Bcx"/>
-                                    <constraint firstAttribute="width" constant="262" id="I6Z-uj-PdF"/>
+                                    <constraint firstAttribute="width" constant="260" id="0s4-af-ew0"/>
+                                    <constraint firstAttribute="height" constant="102" id="Hhn-m1-oul"/>
                                 </constraints>
                                 <string key="text">This open source wallet uses the iOS 8 Touch ID API to securely store you private key in your Apple Keychain, which can only be accessed with your fingerprint.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="0ne-XW-Bcx"/>
-                                        <exclude reference="I6Z-uj-PdF"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="0ne-XW-Bcx"/>
-                                        <include reference="I6Z-uj-PdF"/>
-                                    </mask>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.070588235289999995" green="0.79215686269999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="82T-8j-rjD" secondAttribute="centerX" id="7Dk-ub-URY"/>
-                            <constraint firstAttribute="centerX" secondItem="odL-24-uCS" secondAttribute="centerX" id="9P6-jR-RJb"/>
                             <constraint firstItem="HTz-uz-ufP" firstAttribute="top" secondItem="jts-df-Mic" secondAttribute="top" id="CPM-xi-2dn"/>
                             <constraint firstItem="HTz-uz-ufP" firstAttribute="centerX" secondItem="odL-24-uCS" secondAttribute="centerX" id="CVb-Xh-Q8Z"/>
-                            <constraint firstItem="82T-8j-rjD" firstAttribute="leading" secondItem="HTz-uz-ufP" secondAttribute="trailing" constant="-289" id="E9v-Jh-eDG"/>
-                            <constraint firstItem="oWf-hE-eyg" firstAttribute="centerX" secondItem="9pk-Os-Taw" secondAttribute="centerX" id="HgF-nU-Y0d"/>
-                            <constraint firstAttribute="centerX" secondItem="82T-8j-rjD" secondAttribute="centerX" id="LfW-7h-MY9"/>
-                            <constraint firstItem="odL-24-uCS" firstAttribute="top" secondItem="82T-8j-rjD" secondAttribute="bottom" constant="17" id="PxE-fd-bTN"/>
-                            <constraint firstItem="odL-24-uCS" firstAttribute="centerX" secondItem="jts-df-Mic" secondAttribute="centerX" id="U6L-Gi-cKq"/>
-                            <constraint firstItem="HTz-uz-ufP" firstAttribute="top" secondItem="jts-df-Mic" secondAttribute="top" id="Ueb-Cr-ceJ"/>
-                            <constraint firstItem="82T-8j-rjD" firstAttribute="leading" secondItem="HTz-uz-ufP" secondAttribute="trailing" constant="-289" id="Uwj-Zo-cuY"/>
+                            <constraint firstItem="oWf-hE-eyg" firstAttribute="top" secondItem="9pk-Os-Taw" secondAttribute="bottom" constant="5" id="Kfy-jb-OgP"/>
                             <constraint firstItem="31l-iL-Deq" firstAttribute="top" secondItem="odL-24-uCS" secondAttribute="bottom" constant="20" id="UxM-b8-BBI"/>
-                            <constraint firstItem="HTz-uz-ufP" firstAttribute="leading" secondItem="jts-df-Mic" secondAttribute="leading" id="V0S-Vl-MpH"/>
-                            <constraint firstItem="odL-24-uCS" firstAttribute="centerX" secondItem="82T-8j-rjD" secondAttribute="centerX" constant="-1" id="ah3-VS-Vaq"/>
-                            <constraint firstItem="9pk-Os-Taw" firstAttribute="centerX" secondItem="HTz-uz-ufP" secondAttribute="centerX" id="cbc-aP-Acb"/>
+                            <constraint firstAttribute="centerX" secondItem="oWf-hE-eyg" secondAttribute="centerX" id="ayL-Cz-myu"/>
                             <constraint firstAttribute="bottom" secondItem="odL-24-uCS" secondAttribute="bottom" constant="20" symbolic="YES" id="cxb-dQ-2dT"/>
                             <constraint firstAttribute="centerX" secondItem="9pk-Os-Taw" secondAttribute="centerX" id="dqH-a6-IK4"/>
-                            <constraint firstItem="82T-8j-rjD" firstAttribute="top" secondItem="oWf-hE-eyg" secondAttribute="bottom" constant="187" id="ih0-ug-TQ1"/>
-                            <constraint firstItem="82T-8j-rjD" firstAttribute="centerX" secondItem="odL-24-uCS" secondAttribute="centerX" id="oOA-vV-6lP"/>
+                            <constraint firstAttribute="centerX" secondItem="HTz-uz-ufP" secondAttribute="centerX" id="iIf-Lw-2jN"/>
+                            <constraint firstAttribute="centerX" secondItem="82T-8j-rjD" secondAttribute="centerX" id="qLl-P6-Sbf"/>
                             <constraint firstItem="9pk-Os-Taw" firstAttribute="top" secondItem="NTT-4U-h3x" secondAttribute="bottom" constant="32" id="s0w-Wg-aHa"/>
-                            <constraint firstAttribute="centerX" secondItem="oWf-hE-eyg" secondAttribute="centerX" id="tNE-4X-5Mu"/>
-                            <constraint firstItem="9pk-Os-Taw" firstAttribute="top" secondItem="oWf-hE-eyg" secondAttribute="top" constant="-48" id="ypO-56-TrK"/>
+                            <constraint firstItem="82T-8j-rjD" firstAttribute="top" secondItem="NTT-4U-h3x" secondAttribute="bottom" constant="324" id="yIV-Q4-mbb"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Ueb-Cr-ceJ"/>
-                                <exclude reference="V0S-Vl-MpH"/>
-                                <exclude reference="cbc-aP-Acb"/>
-                                <exclude reference="HgF-nU-Y0d"/>
-                                <exclude reference="E9v-Jh-eDG"/>
-                                <exclude reference="LfW-7h-MY9"/>
-                                <exclude reference="Uwj-Zo-cuY"/>
-                                <exclude reference="oOA-vV-6lP"/>
-                                <exclude reference="9P6-jR-RJb"/>
-                                <exclude reference="PxE-fd-bTN"/>
-                                <exclude reference="ah3-VS-Vaq"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="constraints">
-                                <include reference="E9v-Jh-eDG"/>
-                                <include reference="Uwj-Zo-cuY"/>
-                                <include reference="PxE-fd-bTN"/>
-                                <include reference="ah3-VS-Vaq"/>
-                            </mask>
-                        </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="Ueb-Cr-ceJ"/>
-                                <include reference="V0S-Vl-MpH"/>
-                                <include reference="cbc-aP-Acb"/>
-                                <include reference="HgF-nU-Y0d"/>
-                                <include reference="LfW-7h-MY9"/>
-                                <include reference="oOA-vV-6lP"/>
-                                <include reference="9P6-jR-RJb"/>
-                                <exclude reference="U6L-Gi-cKq"/>
                                 <exclude reference="cxb-dQ-2dT"/>
                             </mask>
                         </variation>
