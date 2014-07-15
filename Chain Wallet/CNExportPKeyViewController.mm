@@ -84,7 +84,7 @@
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result {
     switch (result) {
         case MessageComposeResultFailed: {
-            UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Oups, error while sendind SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Unable to send message" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [warningAlert show];
             break;
         }   

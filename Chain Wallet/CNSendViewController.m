@@ -74,7 +74,7 @@
 #pragma mark - Alert Views
 
 - (void)_presentErrorAlert:(NSString *)errorString {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Sending" message:errorString delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Okay", nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Sending" message:errorString delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     [alertView show];
     [self showSendButton];
 }

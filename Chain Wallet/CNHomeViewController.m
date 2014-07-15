@@ -45,7 +45,7 @@
     self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateBalanceAndTransactions) userInfo:nil repeats:YES];
     
     if(![CNLocalAuthenication isTouchIDAvailable]) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"TouchID Required" message:@"TouchID is required to use Chain Wallet" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"TouchID Required" message:@"TouchID is required to use Chain Wallet" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertView show];
     }
 }

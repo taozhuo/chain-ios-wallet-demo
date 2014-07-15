@@ -41,7 +41,7 @@
                 if ([fallBackErrorAlertString length]) {
                     // Show error.
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!" message:fallBackErrorAlertString delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+                        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!" message:fallBackErrorAlertString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                         [alertView show];
                     });
                 } else {
@@ -80,7 +80,7 @@
             }
         } else {
             NSString *errorMessage = [NSString stringWithFormat:@"Unable to send. The entered private key is not for: %@", publicKeyString];
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Private Key" message:errorMessage delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Private Key" message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alertView show];
         }
     }
