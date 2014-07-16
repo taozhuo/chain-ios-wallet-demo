@@ -23,6 +23,7 @@
 		C9A02FA41974984900680A53 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A02FA31974984900680A53 /* UIColor+Additions.m */; };
 		C9B766F71964CDD700B278E9 /* CNKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B766F61964CDD700B278E9 /* CNKeyManager.m */; };
 		C9B766FA1964CDDD00B278E9 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B766F91964CDDD00B278E9 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9DABA6419773205003965C6 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DABA6319773205003965C6 /* NSString+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		C9B766F61964CDD700B278E9 /* CNKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNKeyManager.m; sourceTree = "<group>"; };
 		C9B766F81964CDDD00B278E9 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		C9B766F91964CDDD00B278E9 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		C9DABA6219773205003965C6 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		C9DABA6319773205003965C6 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		DBF0F8BEE9CE42109B86A0DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,7 +137,7 @@
 				000BEB8119649F48008E2865 /* Images.xcassets */,
 				000BEB7E19649F48008E2865 /* Main.storyboard */,
 				000BEB7419649F48008E2865 /* Supporting Files */,
-				C9A02FA11974981A00680A53 /* UIKit Additions */,
+				C9A02FA11974981A00680A53 /* Additions */,
 			);
 			path = "Chain Wallet";
 			sourceTree = "<group>";
@@ -167,13 +170,15 @@
 			name = External;
 			sourceTree = "<group>";
 		};
-		C9A02FA11974981A00680A53 /* UIKit Additions */ = {
+		C9A02FA11974981A00680A53 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				C9DABA6219773205003965C6 /* NSString+Additions.h */,
+				C9DABA6319773205003965C6 /* NSString+Additions.m */,
 				C9A02FA21974984900680A53 /* UIColor+Additions.h */,
 				C9A02FA31974984900680A53 /* UIColor+Additions.m */,
 			);
-			name = "UIKit Additions";
+			name = Additions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +323,7 @@
 				C94D88FD19661B73009240BF /* CNBitcoinSendManager.m in Sources */,
 				C9A02FA41974984900680A53 /* UIColor+Additions.m in Sources */,
 				C9B766FA1964CDDD00B278E9 /* KeychainItemWrapper.m in Sources */,
+				C9DABA6419773205003965C6 /* NSString+Additions.m in Sources */,
 				C9B766F71964CDD700B278E9 /* CNKeyManager.m in Sources */,
 				000BEB7A19649F48008E2865 /* CNAppDelegate.m in Sources */,
 				004EA53B196CC3E30061A6B0 /* CNReceiveViewController.mm in Sources */,

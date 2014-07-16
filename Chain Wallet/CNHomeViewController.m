@@ -14,6 +14,7 @@
 #import "CNLocalAuthenication.h"
 #import <CoreBitcoin/CoreBitcoin+Categories.h>
 #import "UIColor+Additions.h"
+#import "NSString+Additions.h"
 
 #define SEND_METHOD_ACTION_SHEET_TAG 1
 #define OPTIONS_ACTION_SHEET_TAG 2
@@ -126,8 +127,7 @@
         if (!error) {
             self.balance = [[dictionary objectForKey:@"unconfirmed_balance"] integerValue]+ [[dictionary objectForKey:@"balance"] integerValue];
             dispatch_async(dispatch_get_main_queue(), ^{
-                float btcFloat = ((float)self.balance)/BTCCoin;
-                NSString *formattedBalanceString = [NSString stringWithFormat:@"฿ %f", btcFloat];
+                NSString *formattedBalanceString = [NSString stringWithFormat:@"฿ %@", [NSString stringWithSatoshiInBTCFormat:self.balance]];
                 [self setTitle:formattedBalanceString];
             });
             // Store the Address as User Default
@@ -279,14 +279,7 @@
     
     // Transaction Amount
     BTCSatoshi transactionValue = [self _valueForTransactionForCurrentUser:transaction];
-    NSNumber *BTCValueNumber = [NSNumber numberWithFloat: (float)transactionValue/BTCCoin];
-
-    NSNumberFormatter *twoDecimalPlacesFormatter = [[NSNumberFormatter alloc] init];
-    [twoDecimalPlacesFormatter setMaximumFractionDigits:10];
-    [twoDecimalPlacesFormatter setMinimumFractionDigits:2];
-    [twoDecimalPlacesFormatter setMinimumIntegerDigits:1];
-    
-    NSString *transactionAmountString = [NSString stringWithFormat:@"฿ %@", [twoDecimalPlacesFormatter stringFromNumber:BTCValueNumber]];
+    NSString *transactionAmountString = [NSString stringWithFormat:@"฿ %@", [NSString stringWithSatoshiInBTCFormat:transactionValue]];
     transactionAmount.text = transactionAmountString;
     
     // Change Color of Transaction Amount if is sent or received or to self

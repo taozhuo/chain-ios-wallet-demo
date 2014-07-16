@@ -7,6 +7,7 @@
 
 #import "CNSendViewController.h"
 #import "CNBitcoinSendManager.h"
+#import "NSString+Additions.h"
 #import <CoreBitcoin/CoreBitcoin+Categories.h>
 
 #define FIXED_FEE 10000
@@ -25,8 +26,7 @@
     
     // A transaction requires a miner fee
     BTCSatoshi availableBalance = self.balance - FIXED_FEE;
-    
-    self.amountAvailable.text = [NSString stringWithFormat:@"฿%f Available (after miner fee)", (float)availableBalance/BTCCoin];
+    self.amountAvailable.text = [NSString stringWithFormat:@"฿ %@ Available (after miner fee)", [NSString stringWithSatoshiInBTCFormat:availableBalance]];
 }
 
 #pragma mark - IB Actions
@@ -81,7 +81,7 @@
 
 - (void)presentConfirmationAlert {
     NSString *amountString = self.amountTextField.text;
-    NSString *confirmationMessage  = [NSString stringWithFormat:@"Are you sure you want to send ฿%@ to %@?", amountString, self.sendToAddress];
+    NSString *confirmationMessage  = [NSString stringWithFormat:@"Are you sure you want to send ฿ %@ to %@?", amountString, self.sendToAddress];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Send Bitcoin?"
                                                         message:confirmationMessage
                                                        delegate:self
